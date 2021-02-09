@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Movies.MoviesDetails"
+             Title="Movie Details">
+    <ContentPage.Content>
+
+        <Grid BackgroundColor="Azure">
+           <Grid.RowDefinitions>
+               <RowDefinition Height="*"/>
+               <RowDefinition Height="100"/>
+               <RowDefinition Height="200"/>
+
+           </Grid.RowDefinitions>
+           <Image  Aspect="AspectFit" x:Name="MovieImage" Grid.Row="0"/>
+
+           <Grid Grid.Row="1" >
+           <Grid.RowDefinitions>
+           </Grid.RowDefinitions>
+
+               <StackLayout Grid.Column="0">
+                <Label Text="Title" TextColor="Black" FontSize="20" HorizontalTextAlignment="Center"/>
+                <Label x:Name="title_label" Text="Title" FontSize="20" HorizontalTextAlignment="Center"/>
+               </StackLayout>
+
+               <StackLayout Grid.Column="1">
+                <Label Text="Votes" TextColor="Black" FontSize="20" HorizontalTextAlignment="Center"/>
+                <Label x:Name="vote_label" Text="Title" FontSize="20" HorizontalTextAlignment="Center"/>
+               </StackLayout>
+
+               <StackLayout Grid.Column="2">
+                <Label Text="Release date" TextColor="Black" FontSize="18" HorizontalTextAlignment="Center"/>
+                <Label x:Name="year_label" Text="Title" FontSize="20" HorizontalTextAlignment="Center"/>
+               </StackLayout>
+
+
+        </Grid>
+            <ScrollView Grid.Row="2" Orientation="Vertical">
+                            <Label  x:Name="details_label" Text=""  FontSize="20" HorizontalTextAlignment="Center"/>
+
+            </ScrollView>
+
+
+       </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="Select a Movie" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Movies.Movies_list">
+    <ContentPage.Content>
+         <Grid BackgroundColor="Azure">
+           <Grid.RowDefinitions>
+               <RowDefinition Height="*"/>
+               <RowDefinition Height="70"/>
+               <RowDefinition Height="60"/>
+           </Grid.RowDefinitions>
+           <Image  Aspect="AspectFit" x:Name="myImage" Grid.Row="0" BindingContext="{x:Reference myImage}"/>
+
+           <Grid Grid.Row="1" >
+           <Grid.RowDefinitions>
+           </Grid.RowDefinitions>
+                <Button x:Name="backButton" Grid.Column="0" Text="Back" Command="{Binding backCommand}"/>
+                <Button x:Name="NextButton" Grid.Column="1" Text="Next" Command="{Binding nextCommand}"/>
+
+        </Grid>
+   <Button x:Name="selectedButton" Grid.Row="2" BackgroundColor="GreenYellow" Text="Select" Command="{Binding selectedCommand}"/>
+
+
+       </Grid>
+    </ContentPage.Content>
+</ContentPage>
